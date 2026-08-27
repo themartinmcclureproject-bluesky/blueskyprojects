@@ -3,73 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latest Update | The Blue Sky Ecosystems Projects CIC</title>
+    <title>August 2026 Update | The Blue Sky Ecosystems Projects CIC</title>
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #fcfdfe;
-            text-align: center;
-            padding: 10% 20px;
+            background-color: #f4f6f8;
+            color: #222;
             margin: 0;
+            padding: 40px 20px;
+            text-align: center;
         }
-        .menu-box {
-            max-width: 500px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border: 1px solid #dcdde1;
+        .header {
+            margin-bottom: 30px;
         }
         h1 {
             color: #0a3d62;
-            font-size: 22pt;
-            margin-top: 0;
-            margin-bottom: 10px;
+            font-size: 24pt;
+            margin: 0 0 10px 0;
         }
-        p {
+        p.subtitle {
+            font-size: 14pt;
             color: #555;
-            font-size: 13pt;
-            margin-bottom: 35px;
+            margin: 0;
         }
-        .view-btn {
-            display: block;
+        .document-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 800px; 
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .download-btn {
+            display: inline-block;
             background-color: #0a3d62;
             color: white;
-            padding: 18px 20px;
+            padding: 14px 28px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            font-size: 14pt;
+            margin-top: 25px;
+            font-size: 12pt;
             transition: background-color 0.3s;
-            margin-bottom: 15px;
         }
-        .view-btn:hover {
+        .download-btn:hover {
             background-color: #3c6382;
         }
-        .download-link {
-            display: inline-block;
-            color: #3c6382;
-            text-decoration: underline;
-            font-size: 11pt;
+        @media (max-width: 768px) {
+            iframe {
+                height: 500px; /* Adjusts height for mobile screens */
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="menu-box">
-        <h1>Progress Updates</h1>
-        <p>The Blue Sky Ecosystems Projects CIC</p>
-        
-        <!-- Opens the PDF in a new tab to view without downloading -->
-        <a href="../August_2026_Update_BskyP.pdf" target="_blank" class="view-btn">
-            View the Official August 2026 Update
-        </a>
+    <div class="header">
+        <h1>August 2026 Progress Update</h1>
+        <p class="subtitle">The Blue Sky Ecosystems Projects CIC</p>
+    </div>
 
-        <!-- Small traditional download link underneath just in case -->
-        <a href="../August_2026_Update_BskyP.pdf" download class="download-link">
-            Or click here to download the file
+    <!-- The presentation box holding the document -->
+    <div class="document-wrapper">
+        
+        <!-- The PDF is embedded here. The toolbar=0 hides the messy grey PDF menus -->
+        <iframe src="../August_2026_Update_BskyP.pdf#toolbar=0&view=FitH" title="August 2026 Update"></iframe>
+        
+        <br>
+        <!-- The standalone download button -->
+        <a href="../August_2026_Update_BskyP.pdf" download class="download-btn">
+            Download Official Report (PDF)
         </a>
+        
     </div>
 
 </body>
