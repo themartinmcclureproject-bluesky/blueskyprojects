@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progress Update | The Blue Sky Ecosystems Projects CIC</title>
+    <title>Progress Updates | The Blue Sky Ecosystems Projects CIC</title>
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -11,64 +11,82 @@
             line-height: 1.6;
             margin: 0;
             padding: 40px 20px;
-            text-align: center;
             background-color: #fcfdfe;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
         }
         h1 {
             color: #0a3d62;
             font-size: 28pt;
-            margin-bottom: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #82ccdd;
+            padding-bottom: 10px;
         }
-        p {
-            font-size: 14pt;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-        }
-        .pdf-container {
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .update-block {
+            background: #ffffff;
             border: 1px solid #dcdde1;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        iframe {
-            width: 100%;
-            height: 800px;
-            border: none;
+        .update-block h2 {
+            color: #3c6382;
+            margin-top: 0;
+            font-size: 20pt;
+        }
+        .update-date {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-size: 11pt;
         }
         .download-btn {
             display: inline-block;
             background-color: #0a3d62;
             color: white;
-            padding: 15px 30px;
+            padding: 10px 20px;
             text-decoration: none;
-            font-size: 14pt;
             font-weight: bold;
             border-radius: 5px;
-            margin-top: 30px;
-            transition: background-color 0.3s;
+            margin-top: 15px;
+            font-size: 12pt;
         }
         .download-btn:hover {
             background-color: #3c6382;
-        }
-        @media (max-width: 768px) {
-            iframe {
-                height: 500px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <h1>August Progress Update</h1>
-    <p>Review the latest developments, community partnerships, and technical infrastructure updates for The Blue Sky Ecosystems Projects CIC.</p>
+    <div class="container">
+        <h1>Ecosystem Progress Updates</h1>
+        
+        <!-- ========================================== -->
+        <!-- AUGUST UPDATE BLOCK                        -->
+        <!-- ========================================== -->
+        <div class="update-block">
+            <h2>August 2026: Foundation & Infrastructure</h2>
+            <div class="update-date">Published: August 2026</div>
+            
+            <p><strong>Something transformative is being built from the ground up.</strong></p>
+            <p>This month, we officially established the digital and operational infrastructure for The Blue Sky Ecosystems Projects CIC in West Cumbria. We have successfully launched our initial web presence, secured our private organizational communications, and began mapping our digital blueprint directly to our physical rollout strategy.</p>
+            
+            <h3>Key Milestones:</h3>
+            <ul>
+                <li>Finalized our core stewardship model and community vision.</li>
+                <li>Configured our independent domain and repository hosting.</li>
+                <li>Initiated logistical planning for sourcing and allocating capability equipment to local grassroots partners.</li>
+            </ul>
 
-    <!-- Embedded PDF Viewer -->
-    <div class="pdf-container">
-        <iframe src="../August_2026_Update_BskyP.pdf" title="August Progress Update"></iframe>
+            <a href="../August_2026_Update_BskyP.pdf" download class="download-btn">Download Official August Report (PDF)</a>
+        </div>
+        <!-- END OF AUGUST UPDATE -->
+
     </div>
-
-    <!-- Download Button -->
-    <a href="../August_2026_Update_BskyP.pdf" download class="download-btn">Download Full PDF Report</a>
 
 </body>
 </html>
