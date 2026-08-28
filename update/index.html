@@ -16,13 +16,13 @@
             flex-direction: column;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
+        
         /* Top Title Bar */
         .top-bar {
             background-color: #0a3d62;
             color: white;
             padding: 15px 20px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
             z-index: 10;
         }
         .top-bar h1 {
@@ -30,7 +30,6 @@
             font-size: 14pt;
             font-weight: normal;
         }
-        /* Style for the website link in the title */
         .top-bar a {
             color: white;
             text-decoration: none;
@@ -38,34 +37,64 @@
         .top-bar a:hover {
             text-decoration: underline;
         }
+
+        /* Tab Navigation Container */
+        .tabs-container {
+            display: flex;
+            background-color: #e1e4e8;
+            padding: 10px 20px 0 20px;
+            border-bottom: 3px solid #ffffff;
+        }
+
+        /* Individual Tabs */
+        .tab {
+            padding: 10px 25px;
+            font-size: 12pt;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px 8px 0 0;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Active Viewer Tab */
+        .tab-active {
+            background-color: #ffffff;
+            color: #0a3d62;
+            border: 1px solid #d1d5da;
+            border-bottom: none;
+            /* Pulls the tab down slightly to merge with the viewer area */
+            margin-bottom: -3px; 
+            padding-bottom: 13px; 
+        }
+
+        /* Download Tab */
+        .tab-download {
+            background-color: #d1d5da;
+            color: #24292e;
+            border: 1px solid transparent;
+            margin-left: auto; /* Pushes the download tab to the right side */
+        }
+        .tab-download:hover {
+            background-color: #0a3d62;
+            color: white;
+        }
+
+        /* Document Viewer Area */
+        .document-viewer {
+            flex-grow: 1;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
         /* The PDF expands to fill all middle space */
         iframe {
             width: 100%;
-            flex-grow: 1;
+            height: 100%;
             border: none;
             display: block;
-        }
-        /* Bottom Download Bar */
-        .bottom-bar {
-            background-color: #ffffff;
-            padding: 15px 20px;
-            text-align: center;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-            z-index: 10;
-        }
-        .download-btn {
-            display: inline-block;
-            background-color: #0a3d62;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            font-size: 12pt;
-            transition: background-color 0.3s;
-        }
-        .download-btn:hover {
-            background-color: #3c6382;
         }
     </style>
 </head>
@@ -76,12 +105,15 @@
         <h1><a href="https://blueskyprojects.org.uk/">The Blue Sky Ecosystem Projects CIC</a> - August 2026 Update</h1>
     </div>
 
-    <!-- Edge-to-Edge PDF Viewer -->
-    <iframe src="../August_2026_Update_BskyP.pdf" title="August 2026 Update"></iframe>
+    <!-- Tab System -->
+    <div class="tabs-container">
+        <div class="tab tab-active">View Update</div>
+        <a href="../August_2026_Update_BskyP.pdf" download class="tab tab-download">Download Official PDF Report</a>
+    </div>
 
-    <!-- Bottom Bar with Download Button -->
-    <div class="bottom-bar">
-        <a href="../August_2026_Update_BskyP.pdf" download class="download-btn">Download Official PDF Report</a>
+    <!-- Document Viewer Area -->
+    <div class="document-viewer">
+        <iframe src="../August_2026_Update_BskyP.pdf" title="August 2026 Update"></iframe>
     </div>
 
 </body>
