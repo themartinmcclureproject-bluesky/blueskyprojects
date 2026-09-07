@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Blue Sky Ecosystem Projects CIC - Business Card</title>
+<style>
+  @page {
+    size: A4 landscape;
+    margin: 15mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sheet {
+    display: flex;
+    gap: 15mm;
+    background: #ffffff;
+    padding: 20mm;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  /* CARD DIMENSIONS: Standard UK 85mm x 55mm */
+  .card {
+    width: 85mm;
+    height: 55mm;
+    border-radius: 3px;
+    border: 1px solid #cbd5e1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* SIDE A (FRONT) */
+  .side-a {
+    background-color: #ffffff;
+    padding: 6mm 7mm;
+    border-top: 3px solid #0f172a;
+    background-image: radial-gradient(#bae6fd 0.75px, transparent 0.75px);
+    background-size: 8px 8px;
+  }
+  .title {
+    font-size: 8.5pt;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 2px;
+  }
+  .subtitle {
+    font-size: 7pt;
+    color: #0284c7;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .desc {
+    font-size: 6.2pt;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.3;
+  }
+  .divider {
+    border-top: 1px dashed #cbd5e1;
+    margin: 4px 0;
+  }
+  .footer {
+    font-size: 6pt;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+  /* SIDE B (REVERSE) */
+  .side-b {
+    background-color: #e0f2fe;
+    padding: 6mm;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .back-title {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #0f172a;
+    letter-spacing: 0.3px;
+    margin-bottom: 5mm;
+  }
+  .qr-box {
+    width: 28mm;
+    height: 28mm;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 2mm;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .qr-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  @media print {
+    body {
+      background: none;
+      padding: 0;
+    }
+    .sheet {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="sheet">
+    <!-- FRONT (SIDE A) -->
+    <div class="card side-a">
+      <div>
+        <div class="title">The Blue Sky Ecosystem Projects CIC</div>
+        <div class="subtitle">A Global Ecosystem of Even, Loving Care</div>
+        <div class="desc">
+          Digital resource hub for trauma-informed peer support, relationship recovery, and community resilience.
+        </div>
+      </div>
+      <div>
+        <div class="divider"></div>
+        <div class="footer">
+          <strong>Martin McClure</strong> • Lead Visionary / CEO<br>
+          📞 <strong>Tel:</strong> 07404784593<br>
+          🌐 <strong>Web:</strong> www.blueskyprojects.org.uk
+        </div>
+      </div>
+    </div>
+
+    <!-- REVERSE (SIDE B) -->
+    <div class="card side-b">
+      <div class="back-title">CONNECT & DISCOVER OUR MISSION</div>
+      <div class="qr-box">
+        <!-- Live QR code linking directly to your overview PDF -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://www.blueskyprojects.org.uk/overview.pdf" alt="QR Code">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
