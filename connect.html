@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Blue Sky Ecosystem Projects CIC - Official Community Blueprint</title>
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --navy: #0f172a;
+      --slate: #334155;
+      --muted: #64748b;
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --accent-blue: #e0f2fe;
+      --emergency-red: #b91c1c;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--navy);
+      line-height: 1.6;
+      padding-bottom: 90px;
+    }
+
+    /* TOP BRAND BAR */
+    header {
+      background-color: #ffffff;
+      border-bottom: 2px solid var(--primary);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+    }
+    .brand-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.2px;
+    }
+    .reg-tag {
+      background-color: var(--accent-blue);
+      color: var(--primary-dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* PAGE WRAPPER */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 20px 16px;
+    }
+
+    /* HERO CARD */
+    .hero {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+      margin-bottom: 20px;
+      border-top: 4px solid var(--primary);
+    }
+    .hero h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .hero .tagline {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px;
+      background: var(--light-bg);
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      color: var(--slate);
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    /* NOTICE BOX */
+    .notice-box {
+      background-color: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 14px 16px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: #92400e;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    /* DOWNLOAD CARD */
+    .download-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
+    }
+    .download-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .download-icon {
+      background: rgba(2, 132, 199, 0.25);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .download-text h2 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .download-text p {
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+    .btn-download-main {
+      background-color: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-align: center;
+      padding: 12px 18px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background-color 0.2s ease;
+    }
+    .btn-download-main:hover {
+      background-color: var(--primary-dark);
+    }
+
+    /* SECTION CONTAINERS */
+    .section-block {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      margin-bottom: 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section-lead {
+      font-size: 0.9rem;
+      color: var(--slate);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    /* CARDS & GRIDS */
+    .grid-cards {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .card-item {
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .card-item h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .card-item p {
+      font-size: 0.84rem;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    /* TABLES */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      text-align: left;
+      min-width: 480px;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: var(--navy);
+      font-weight: 700;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--slate);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    .status-badge {
+      background-color: #e0f2fe;
+      color: #0369a1;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      display: inline-block;
+    }
+
+    /* QUOTE BOX */
+    .quote-box {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      padding: 14px 16px;
+      border-radius: 6px;
+      font-size: 0.86rem;
+      font-style: italic;
+      color: #14532d;
+      line-height: 1.6;
+      margin: 16px 0;
+    }
+
+    /* EMERGENCY SIGNPOSTING */
+    .emergency-card {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+    .emergency-card h3 {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--emergency-red);
+      margin-bottom: 10px;
+    }
+    .emergency-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+      font-size: 0.82rem;
+    }
+    .emergency-item {
+      background: #ffffff;
+      border: 1px solid #fee2e2;
+      padding: 8px 10px;
+      border-radius: 6px;
+      color: #7f1d1d;
+    }
+    .emergency-item strong {
+      display: block;
+      color: var(--emergency-red);
+      font-size: 0.85rem;
+    }
+
+    /* FLOATING BOTTOM ACTION BAR */
+    .fixed-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      padding: 12px 16px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
+      z-index: 1000;
+    }
+    .btn-bottom-dl {
+      flex: 2;
+      max-width: 320px;
+      text-align: center;
+      background-color: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 12px 16px;
+      border-radius: 8px;
+    }
+    .btn-bottom-home {
+      flex: 1;
+      max-width: 140px;
+      text-align: center;
+      background-color: #f1f5f9;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 24px;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand-title">The Blue Sky Ecosystem Projects CIC</div>
+    <div class="reg-tag">Company No: 17386408</div>
+  </header>
+
+  <div class="container">
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+      <h1>The Blue Sky Ecosystem Projects CIC</h1>
+      <div class="tagline">Strategic Foundations, Lived-Experience Methodology &amp; Governance Blueprint</div>
+      
+      <div class="hero-meta">
+        <div><strong>Lead Visionary / MD:</strong> Martin McClure</div>
+        <div><strong>Established:</strong> August 06th, 2026</div>
+        <div><strong>Headquarters:</strong> Workington, West Cumbria</div>
+        <div><strong>Contact:</strong> 07404784593 | contact@blueskyprojects.org.uk</div>
+      </div>
+      
+      <p style="font-size: 0.9rem; color: var(--slate);">
+        A strategic community initiative addressing acute life challenges through authentic lived experience, trauma recovery, personal accountability, and emotional healing.
+      </p>
+    </div>
+
+    <!-- ACTIVE BUILD NOTICE -->
+    <div class="notice-box">
+      <strong>Active Build &amp; Perfection Phase Notice:</strong> We are currently in our active, deliberate build phase so that every single detail is perfected with no stone left unturned. We are purposely building this project slowly and steadily—never at a rushed pace. As part of our commitment to transparency, visit www.blueskyprojects.org.uk for monthly updates showing our exact stage of development.
+    </div>
+
+    <!-- PRIMARY DOWNLOAD CARD -->
+    <div class="download-card">
+      <div class="download-header">
+        <div class="download-icon">📥</div>
+        <div class="download-text">
+          <h2>Download Official Public Blueprint (PDF)</h2>
+          <p>Complete 4-Page Governance, Methodology &amp; Operational Blueprint</p>
+        </div>
+      </div>
+      <a class="btn-download-main" href="Back_Of_Business_Card_INFORMATION.pdf" download="The_Blue_Sky_Projects_Official_Blueprint.pdf">
+        ⬇ Download Complete Blueprint PDF
+      </a>
+    </div>
+
+    <!-- SECTION 1: OPERATIONAL BLUEPRINT & METHODOLOGY -->
+    <div class="section-block">
+      <div class="section-title">
+        <span>Section 1: Operational Blueprint &amp; Methodology</span>
+      </div>
+      <p class="section-lead">
+        Anchored by an extensive 20,000-word empirical archive of documented behavioral patterns and recovery pathways, the initiative combines radical honesty with digital infrastructure to shift community response from reactive fallout mitigation to early prevention.
+      </p>
+
+      <div class="card-item" style="margin-bottom: 12px;">
+        <h3>Vision &amp; Philosophy: From Weakness to Strength</h3>
+        <p>No experience is wasted if it can be utilized to protect others, and no individual is beyond the reach of redemption when met with truth, self-honesty, and accountability.</p>
+      </div>
+
+      <h4 style="font-size: 0.88rem; font-weight: 700; margin: 16px 0 8px 0;">The Three Pillars of Operation</h4>
+      <div class="grid-cards">
+        <div class="card-item">
+          <h3>1. Lived Experience Advocacy</h3>
+          <p>Deploying a dedicated team with real-world experience as both survivors and reformed perpetrators of domestic dysfunction to bridge the gap left by detached clinical services.</p>
+        </div>
+        <div class="card-item">
+          <h3>2. The Preventative Method</h3>
+          <p>Educational curriculum derived from our 20,000+ word empirical archive detailing behavioral triggers and real-world "what not to do" scenarios to halt coercive control early.</p>
+        </div>
+        <div class="card-item">
+          <h3>3. Community Funding &amp; Accessibility</h3>
+          <p>A hybrid financial structure pairing Pay-What-You-Can (PWYC) contributions with donor-supported "Free Love" accessible copies to guarantee resources for the most vulnerable.</p>
+        </div>
+      </div>
+
+      <div class="quote-box">
+        "The Blue Sky Project operates on the foundational principle that lived experience is an untapped resource in the fight against domestic abuse. By documenting the hardest paths walked by individuals and making that data accessible through modern digital platforms, we repurpose historical pain into a tool for future safety."
+      </div>
+    </div>
+
+    <!-- IMPLEMENTATION & INFRASTRUCTURE -->
+    <div class="section-block">
+      <div class="section-title">
+        <span>Implementation, Pacing &amp; Umbrella Model</span>
+      </div>
+
+      <div class="grid-cards">
+        <div class="card-item">
+          <h3>Curriculum Focus</h3>
+          <p><strong>The Victim's Journey:</strong> Healing, boundaries, and autonomy.<br>
+          <strong>The Perpetrator's Path:</strong> Behavioral accountability and breaking generational cycles.<br>
+          <strong>Impact on the Family:</strong> Long-term emotional fallout on children and healthy pathways.</p>
+        </div>
+        <div class="card-item">
+          <h3>The "Projects" Umbrella</h3>
+          <p>Structured as a wide umbrella welcoming volunteers with lived experience to offer their voice, empower grassroots project leads to run their own initiatives, and steadily integrate new workbooks over time.</p>
+        </div>
+        <div class="card-item">
+          <h3>Resource Allocation &amp; Security</h3>
+          <p>Prioritizing digital authoring tools, a permanent West Cumbrian grassroots hub, baseline human capital support, and data protection via air-gapped encrypted offline backups.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: GOVERNANCE & SAFEGUARDING -->
+    <div class="section-block">
+      <div class="section-title">
+        <span>Section 2: Governance, Operating Model &amp; Safeguarding</span>
+      </div>
+      <p class="section-lead">
+        Grounded in the "Even, Loving Care" stewardship model, we prioritize deliberate pacing and low-barrier Pay-What-You-Can (PWYC) delivery to ensure team well-being and project durability.
+      </p>
+
+      <div class="card-item" style="margin-bottom: 16px;">
+        <h3>Leadership Structure &amp; One-Team Culture</h3>
+        <p><strong>Martin McClure (Lead Visionary / Managing Director):</strong> Executive leadership; primarily engaged in Domestic Abuse while actively covering domestic abuse, mental health, and addiction with collective support. Retains 100% personal copyright over proprietary frameworks, granting the CIC an exclusive community delivery license.<br><br>
+        <strong>Miraslava (Mira) Maudling (Project Associate):</strong> Strategic advisory and collaborative capacity, integrating to independently lead the Grief &amp; Loss support stream.<br><br>
+        <strong>One-Team Ethos:</strong> Every volunteer and contributor has a genuine voice as we work together as one united team.</p>
+      </div>
+
+      <h4 style="font-size: 0.88rem; font-weight: 700; margin-bottom: 8px;">Core Delivery Portfolio: The Workbook Series</h4>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Delivery Stream</th>
+              <th>Leadership</th>
+              <th>Core Scope &amp; Target Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Grief &amp; Loss Support</strong></td>
+              <td>Miraslava (Mira) Maudling</td>
+              <td>Compassionate bereavement companioning and grounding for navigating sudden loss.</td>
+            </tr>
+            <tr>
+              <td><strong>Domestic Abuse</strong></td>
+              <td>Martin McClure (Primary)</td>
+              <td>Safety roadmaps, deconstructing trauma bonding, and reclaiming personal agency.</td>
+            </tr>
+            <tr>
+              <td><strong>Trauma &amp; Resilience</strong></td>
+              <td>Core Operational Team</td>
+              <td>Neuro-somatic grounding, cognitive reframing, and actionable resilience tools.</td>
+            </tr>
+            <tr>
+              <td><strong>Mental Health &amp; Self-Harm</strong></td>
+              <td>Martin McClure &amp; Team</td>
+              <td>Harm reduction protocols, daily reflection logs, and emotional regulation guides.</td>
+            </tr>
+            <tr>
+              <td><strong>Sobriety &amp; Addiction</strong></td>
+              <td>Martin McClure &amp; Team</td>
+              <td>Relapse prevention matrices, trigger mapping, and lifestyle reorganization.</td>
+            </tr>
+            <tr>
+              <td><strong>Parenting Challenges</strong></td>
+              <td>Core Team &amp; Advisors</td>
+              <td>Support for parents guiding children through neurodiversity and crisis.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SAFEGUARDING SAFETY GATE -->
+      <h4 style="font-size: 0.88rem; font-weight: 700; margin: 18px 0 6px 0;">Safeguarding &amp; The "Safety Gate"</h4>
+      <p style="font-size: 0.84rem; color: var(--slate); margin-bottom: 10px;">
+        Materials and peer circles are educational, not psychiatric or clinical treatment. Prospective facilitators must pass: (1) Structured temperament interview; (2) Standard/Enhanced DBS checks via Cumbria CVS; and (3) Mandatory Safeguarding Adults Level 2 and accredited Mental Health First Aid (MHFA).
+      </p>
+
+      <!-- CRISIS HELPLINES -->
+      <div class="emergency-card">
+        <h3>Emergency &amp; Crisis Signposting Protocol</h3>
+        <div class="emergency-grid">
+          <div class="emergency-item">
+            <strong>Emergency Services</strong> Dial 999
+          </div>
+          <div class="emergency-item">
+            <strong>NHS Mental Health</strong> Dial 111 (Option 2)
+          </div>
+          <div class="emergency-item">
+            <strong>Samaritans (24/7)</strong> 116 123 (Freephone)
+          </div>
+          <div class="emergency-item">
+            <strong>National DA Helpline</strong> 0808 2000 247
+          </div>
+          <div class="emergency-item">
+            <strong>NENC NHS Crisis Line</strong> 0800 652 2865
+          </div>
+          <div class="emergency-item">
+            <strong>Cruse Bereavement</strong> 0808 808 1677
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETUP STATUS & GOVERNANCE READY -->
+    <div class="section-block">
+      <div class="section-title">
+        <span>Current Setup Status: Governance &amp; Readiness</span>
+      </div>
+      <p class="section-lead">
+        In direct alignment with our "no stone left unturned" policy, we do not deliver ahead of our verified foundations.
+      </p>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Setup Area</th>
+              <th>Operational Standard</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Banking Setup</strong></td>
+              <td>Working with The Co-operative Bank; formal application submitted.</td>
+              <td><span class="status-badge">Application In Progress</span></td>
+            </tr>
+            <tr>
+              <td><strong>Insurance Stack</strong></td>
+              <td>£5,000,000 Public Liability, Professional Indemnity &amp; D&amp;O under broker quote review.</td>
+              <td><span class="status-badge">Setup In Progress</span></td>
+            </tr>
+            <tr>
+              <td><strong>Data Governance (GDPR)</strong></td>
+              <td>Data minimization, opt-in consent, and encrypted storage frameworks ready.</td>
+              <td><span class="status-badge">Framework Prepared</span></td>
+            </tr>
+            <tr>
+              <td><strong>Policy Infrastructure</strong></td>
+              <td>Full adoption of Cumbria CVS Safeguarding, Health &amp; Safety, and Lone Working templates.</td>
+              <td><span class="status-badge">CVS Templates In Place</span></td>
+            </tr>
+            <tr>
+              <td><strong>Cumbria CVS Partnership</strong></td>
+              <td>Collaboration with Development Officer Gordon Henry; 3-month review scheduled.</td>
+              <td><span class="status-badge">Scheduled Nov 2026</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <strong>The Blue Sky Ecosystem Projects CIC</strong> • Registered Company No. 17386408<br>
+      Workington, West Cumbria • <a href="https://www.blueskyprojects.org.uk" style="color: var(--primary);">www.blueskyprojects.org.uk</a><br>
+      © 2026 The Blue Sky Ecosystem Projects CIC. All rights reserved.
+    </footer>
+
+  </div>
+
+  <!-- ANCHORED ACTION BAR AT SCREEN BOTTOM -->
+  <div class="fixed-bottom">
+    <a class="btn-bottom-dl" href="Back_Of_Business_Card_INFORMATION.pdf" download="The_Blue_Sky_Projects_Official_Blueprint.pdf">
+      ⬇ Download Blueprint PDF
+    </a>
+    <a class="btn-bottom-home" href="https://www.blueskyprojects.org.uk">
+      Home
+    </a>
+  </div>
+
+</body>
+</html>
