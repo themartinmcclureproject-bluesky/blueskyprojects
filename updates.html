@@ -30,12 +30,12 @@
             justify-content: center;
             align-items: center;
             padding: 40px 20px;
-            gap: 30px; /* Added a gap to cleanly separate multiple update boxes */
+            gap: 30px; /* Separates the two update boxes neatly */
         }
 
         /* Back Button */
         .back-link {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             color: #0077b6;
             text-decoration: none;
             font-weight: bold;
@@ -70,7 +70,7 @@
             justify-content: center;
             align-items: center;
             gap: 15px;
-            flex-wrap: wrap; /* Allows stacking on very small mobile screens */
+            flex-wrap: wrap; 
         }
 
         .update-btn {
@@ -120,22 +120,20 @@
     <main>
         <a href="index.html" class="back-link">← Back to Homepage</a>
 
+        <!-- AUGUST 2026 UPDATE BOX -->
         <div class="update-month-box">
             <h2>August 2026 Update</h2>
             <div class="button-group">
-                <!-- Views the PDF with the toolbars and menus hidden -->
                 <a href="August_2026_Update_BskyP.pdf#toolbar=0&navpanes=0" target="_blank" class="update-btn">View Document</a>
-                <!-- Downloads the PDF -->
                 <a href="August_2026_Update_BskyP.pdf" download class="update-btn secondary">Download PDF</a>
             </div>
         </div>
 
+        <!-- SEPTEMBER 2026 UPDATE BOX (UNDERNEATH AUGUST) -->
         <div class="update-month-box">
             <h2>September 2026 Update</h2>
             <div class="button-group">
-                <!-- Views the PDF with the toolbars and menus hidden -->
                 <a href="September_2026_update.pdf#toolbar=0&navpanes=0" target="_blank" class="update-btn">View Document</a>
-                <!-- Downloads the PDF -->
                 <a href="September_2026_update.pdf" download class="update-btn secondary">Download PDF</a>
             </div>
         </div>
