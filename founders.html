@@ -14,7 +14,7 @@
             background-color: #fcfdfe;
         }
         
-        /* Navigation Bar (matches main site exactly) */
+        /* Navigation Bar */
         .navbar { background-color: #0a3d62; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: relative; }
         .logo { color: white; font-size: 16pt; font-weight: bold; padding: 15px 20px; }
         .menu-btn { display: none; }
@@ -28,41 +28,26 @@
         .dropdown-content a:hover { background-color: #ddd; color: #0a3d62; }
         .nav-links li:hover .dropdown-content { display: block; }
         
+        /* Foundation Banner */
+        .foundation-banner { background-color: #f39c12; color: white; text-align: center; padding: 10px 20px; font-weight: bold; font-size: 11pt; }
+        
         /* Hero Section */
         .hero { text-align: center; padding: 60px 20px; background-color: #eaf1f8; border-bottom: 2px solid #82ccdd; }
         .hero h1 { color: #0a3d62; font-size: 28pt; margin-bottom: 15px; }
         .hero p { font-size: 14pt; max-width: 800px; margin: 0 auto; color: #555; }
         
-        /* Story Content Area */
-        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
-        .intro-text { font-size: 14pt; text-align: center; color: #444; margin-bottom: 50px; font-weight: bold; }
+        /* Content Area */
+        .container { max-width: 850px; margin: 50px auto; padding: 0 20px; }
         
-        .story-block {
+        .founder-box {
             background: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid #dcdde1;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
-        .story-block h2 { color: #0a3d62; font-size: 22pt; margin-top: 0; border-bottom: 2px solid #eaf1f8; padding-bottom: 10px; }
-        .story-block p { font-size: 12pt; color: #333; margin-bottom: 20px; }
-        
-        .quote {
-            font-size: 15pt;
-            font-style: italic;
-            color: #3c6382;
-            border-left: 4px solid #f39c12;
-            padding-left: 20px;
-            margin: 30px 0;
-        }
-        
-        /* Action Banner */
-        .action-banner { background-color: #0a3d62; color: white; text-align: center; padding: 40px 20px; margin-top: 20px; border-radius: 8px; }
-        .action-banner h3 { margin-top: 0; font-size: 18pt; }
-        .action-banner p { font-size: 12pt; margin-bottom: 25px; }
-        .btn-light { display: inline-block; background-color: #ffffff; color: #0a3d62; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; margin: 10px; }
-        .btn-light:hover { background-color: #eaf1f8; }
+        .founder-box h2 { color: #0a3d62; margin-top: 0; }
         
         /* Footer */
         .footer-wrapper { background-color: #222; color: white; margin-top: 50px; }
@@ -81,13 +66,20 @@
 </head>
 <body>
 
+    <div class="foundation-banner">
+        We are currently in our foundational build stage—prioritizing robust safeguarding, governance, and AET frameworks prior to our full community rollout.
+    </div>
+
     <!-- Mobile-Friendly Navigation -->
     <div class="navbar">
         <div class="logo">The Blue Sky Ecosystem Projects CIC</div>
+        
         <input type="checkbox" id="menu-btn" class="menu-btn">
         <label for="menu-btn" class="menu-icon">&#9776;</label>
+        
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
+            
             <li class="dropdown">
                 <a href="#">About Us ▾</a>
                 <div class="dropdown-content">
@@ -95,6 +87,7 @@
                     <a href="founders.html">Our Founders & Lived Experience</a>
                 </div>
             </li>
+            
             <li class="dropdown">
                 <a href="#">What We Do ▾</a>
                 <div class="dropdown-content">
@@ -103,6 +96,7 @@
                     <a href="support.html">Emotional & Bereavement Support</a>
                 </div>
             </li>
+            
             <li class="dropdown">
                 <a href="#">Progress Updates ▾</a>
                 <div class="dropdown-content">
@@ -111,6 +105,7 @@
                     <a href="/update-october">October 2026 Update</a>
                 </div>
             </li>
+
             <li class="dropdown">
                 <a href="#">Contact Us ▾</a>
                 <div class="dropdown-content">
@@ -118,57 +113,23 @@
                     <a href="tel:07404784593">Phone: 07404784593</a>
                 </div>
             </li>
+            
             <li><a href="voice.html">Your Voice Matters</a></li>
             <li><a href="register.html">Register</a></li>
         </ul>
     </div>
 
-    <!-- Hero Section -->
     <div class="hero">
-        <h1>Our Story: Forged in Survival</h1>
-        <p>The Blue Sky Ecosystem Projects CIC is not built on theory. It is built on decades of profound, painful, and ultimately transformative lived experience.</p>
+        <h1>Our Founders & Lived Experience</h1>
+        <p>Built on grassroots realities, hands-on community care, and a shared vision for accessible support across West Cumbria.</p>
     </div>
 
     <div class="container">
         
-        <p class="intro-text">
-            We are living proof that no matter how deep the trauma, how severe the isolation, or how broken the system may seem, the cycle can be broken.
-        </p>
-
-        <!-- Martin's Story -->
-        <div class="story-block">
-            <h2>Martin McClure</h2>
-            <p>For over a decade, my life was trapped in a relentless cycle of profound suffering. I have navigated the absolute darkest corners of human experience—enduring addiction, navigating the harsh realities of the justice system, and experiencing the isolation of being institutionalized and sectioned under the Mental Health Act.</p>
-            
-            <p>I know what it means to be a victim of sexual abuse, carrying trauma that the system failed to acknowledge. I also know the devastating weight of accountability, having confronted and overcome my own past as a perpetrator of domestic abuse. It takes absolute, unflinching honesty to look at the wreckage of your own life and decide to break the cycle.</p>
-            
-            <div class="quote">
-                "Where the support systems failed me, I decided we had to build them for others. Surviving is only half the battle; ensuring no one else has to fight alone is the mission."
-            </div>
-
-            <p>Through years of intense self-regulation, accountability, and sheer will, I survived. But surviving wasn't enough. I realized that the clinical frameworks available simply do not speak the language of those on the ground. That is why I have dedicated my life to designing workbooks, companion guides, and impulse regulation frameworks rooted in brutal honesty and real-world application. I am proof that transformation is possible, and I am passing the ladder back down.</p>
-        </div>
-
-        <!-- Mira's Story -->
-        <div class="story-block">
-            <h2>Mira Maudling</h2>
-            <p>Grief is a landscape that fundamentally alters who you are, but the true devastation comes when you realize you are entirely alone in it. When I lost my husband, I found myself adrift in a profound void. Coming from another country, I was entirely displaced—without the safety net of my family, without local roots, and without a support system equipped to handle the reality of sudden, life-shattering bereavement.</p>
-            
-            <p>I learned firsthand that society often expects you to move on long before the clinical support runs out, and when it does end, you are left to rebuild your life and raise your children in a vacuum of silence.</p>
-            
-            <div class="quote">
-                "We are building the community I so desperately needed when my world collapsed—a space where grief is met with immediate, structured, and compassionate action."
-            </div>
-
-            <p>My journey through isolated grief is the driving force behind our bereavement companion guides and the future facilitated courses we are building. I am working to ensure that anyone facing devastating loss—especially those who are displaced or without family support—has a tangible, empathetic framework to lean on. I am here to prove that you can rebuild, and that true community can catch you when you fall.</p>
-        </div>
-
-        <!-- Call to Action -->
-        <div class="action-banner">
-            <h3>Knit Together By Shared Resilience</h3>
-            <p>We saw firsthand where the support simply wasn't there. By combining our workbooks, companion guides, and upcoming facilitated courses, we are bridging the gap. If our story resonates with you, if you see yourself in our struggles, or if you simply want to help us pave a new way forward—we want you with us.</p>
-            <a href="voice.html" class="btn-light">Share Your Voice</a>
-            <a href="register.html" class="btn-light">Register With Us</a>
+        <div class="founder-box">
+            <h2>Martin & Mira</h2>
+            <p>As the foundational leads of The Blue Sky Ecosystem Projects CIC, our work is driven by a deep commitment to grassroots support, transparent governance, and practical community care.</p>
+            <p>Drawing on decades of combined hands-on experience in technical problem-solving, educational framework development, and community engagement, our goal is to build secure, lasting pathways for individuals and families across Cumbria.</p>
         </div>
 
     </div>
