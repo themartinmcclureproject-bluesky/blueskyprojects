@@ -13,20 +13,34 @@
             padding: 0;
             background-color: #fcfdfe;
         }
+        
         /* Navigation Bar */
         .navbar {
             background-color: #0a3d62;
-            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap; /* Allows wrapping on mobile */
+            position: relative;
         }
         .logo {
             color: white;
             font-size: 16pt;
             font-weight: bold;
-            padding: 15px 0;
+            padding: 15px 20px;
         }
+        
+        /* Mobile Menu Checkbox Hack */
+        .menu-btn { display: none; }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            padding: 10px 20px;
+            user-select: none;
+        }
+        
         .nav-links {
             list-style: none;
             margin: 0;
@@ -47,7 +61,8 @@
         .nav-links a:hover {
             background-color: #3c6382;
         }
-        /* Dropdown Setup */
+        
+        /* Desktop Dropdown Setup */
         .dropdown-content {
             display: none;
             position: absolute;
@@ -73,6 +88,7 @@
         .nav-links li:hover .dropdown-content {
             display: block;
         }
+        
         /* Foundation Banner */
         .foundation-banner {
             background-color: #f39c12;
@@ -82,6 +98,7 @@
             font-weight: bold;
             font-size: 11pt;
         }
+        
         /* Hero Section */
         .hero {
             text-align: center;
@@ -111,7 +128,8 @@
             font-weight: bold;
             margin-top: 15px;
         }
-        /* Sleek Journey Tracking Banner */
+        
+        /* Updates Banner */
         .updates-banner {
             background-color: #3c6382;
             color: white;
@@ -121,70 +139,55 @@
             font-size: 13pt;
             border-bottom: 2px solid #82ccdd;
         }
-        .updates-banner strong {
-            font-weight: bold;
-            color: #eaf1f8;
-        }
+        .updates-banner strong { font-weight: bold; color: #eaf1f8; }
+        
         /* Main Content Grid */
-        .container {
-            max-width: 1100px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-        .section-title {
-            color: #3c6382;
-            font-size: 22pt;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border: 1px solid #dcdde1;
-        }
-        .card h3 {
-            color: #0a3d62;
-            margin-top: 0;
-            font-size: 16pt;
-        }
-        /* Emergency & Legal Footer */
-        .footer-wrapper {
-            background-color: #222;
-            color: white;
-            margin-top: 50px;
-        }
-        .emergency-footer {
-            text-align: center;
-            padding: 30px 20px;
-            border-bottom: 1px solid #444;
-        }
-        .emergency-footer h4 {
-            color: #e74c3c;
-            margin-top: 0;
-        }
-        .legal-footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 10pt;
-            color: #aaa;
-        }
-        @media (max-width: 900px) {
+        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        .section-title { color: #3c6382; font-size: 22pt; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #dcdde1; }
+        .card h3 { color: #0a3d62; margin-top: 0; font-size: 16pt; }
+        
+        /* Footer */
+        .footer-wrapper { background-color: #222; color: white; margin-top: 50px; }
+        .emergency-footer { text-align: center; padding: 30px 20px; border-bottom: 1px solid #444; }
+        .emergency-footer h4 { color: #e74c3c; margin-top: 0; }
+        .legal-footer { text-align: center; padding: 20px; font-size: 10pt; color: #aaa; }
+        
+        /* =========================================
+           MOBILE RESPONSIVENESS (Screens under 1000px)
+           ========================================= */
+        @media (max-width: 1000px) {
+            .menu-icon { display: block; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #0a3d62;
+            }
+            /* When checkbox is checked (hamburger clicked), show menu */
+            .menu-btn:checked ~ .nav-links {
+                display: flex;
+            }
+            .nav-links a {
+                padding: 15px 20px;
+                border-top: 1px solid #08304f;
+            }
             .grid {
                 grid-template-columns: 1fr;
             }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
+            /* Fixes dropdowns on mobile to push down instead of overlapping */
+            .dropdown-content {
+                position: relative;
+                min-width: 100%;
+                box-shadow: none;
+                background-color: #08304f;
+            }
+            .dropdown-content a {
+                color: white;
+                padding-left: 35px;
+                border-bottom: 1px solid #0a3d62;
+                border-top: none;
             }
         }
     </style>
@@ -196,9 +199,14 @@
         We are currently in our foundational build stage—prioritizing robust safeguarding, governance, and AET (Award in Education and Training) frameworks prior to our full community rollout.
     </div>
 
-    <!-- Navigation -->
+    <!-- Mobile-Friendly Navigation -->
     <div class="navbar">
         <div class="logo">The Blue Sky Ecosystem Projects CIC</div>
+        
+        <!-- Hamburger Icon for Mobile -->
+        <input type="checkbox" id="menu-btn" class="menu-btn">
+        <label for="menu-btn" class="menu-icon">&#9776;</label>
+        
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
             
@@ -233,9 +241,11 @@
                 <div class="dropdown-content">
                     <a href="mailto:contact@blueskyprojects.org.uk">Email: contact@blueskyprojects.org.uk</a>
                     <a href="tel:07404784593">Phone: 07404784593</a>
-                    <a href="voice.html">Your Voice Matters (Share Ideas)</a>
                 </div>
             </li>
+            
+            <!-- Your Voice Matters moved to main top level -->
+            <li><a href="voice.html">Your Voice Matters</a></li>
             
             <li><a href="register.html">Register</a></li>
         </ul>
@@ -243,7 +253,8 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <h1>Transforming Lived Experience Into Practical Support & Corporate Resilience</h1>
+        <!-- Incorporates both Corporate and Community Resilience -->
+        <h1>Transforming Lived Experience Into Practical Support, Corporate & Community Resilience</h1>
         <p>A West Cumbria-based Community Interest Company bridging the gap between individuals, employers, and frontline charities through structured educational workbooks and companion guides.</p>
         <div class="clinical-boundary">Where clinical intervention ends, our lived-experience support begins.</div>
     </div>
