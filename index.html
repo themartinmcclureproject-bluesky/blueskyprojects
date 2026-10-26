@@ -1,358 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Blue Sky Ecosystem Projects CIC - Foundational Build Phase</title>
+    <title>The Blue Sky Ecosystem Projects CIC</title>
     <style>
-        /* Base Styles */
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #222;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #fcfdfe;
         }
-
-        body {
-            background-color: #f8f9fa;
-            color: #1d2d44;
-            line-height: 1.6;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #0077b6, #00b4d8);
-            color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 4px solid #caf0f8;
-        }
-
-        .dev-badge {
-            display: inline-block;
-            background: #ffe066;
-            color: #333;
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-        }
-        
-        header h2 {
-            font-size: 1.25rem;
-            font-weight: normal;
-            font-style: italic;
-            color: #e0f7fa;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.5;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        /* CTA Button Styling */
-        .cta-container {
-            text-align: center;
-            margin: 15px 0 35px 0;
-        }
-
-        .update-cta-button {
-            display: inline-block;
+        /* Navigation Bar */
+        .navbar {
             background-color: #0a3d62;
-            color: #ffffff;
-            padding: 14px 32px;
-            font-size: 1.15rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 6px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .update-cta-button:hover {
-            background-color: #3c6382;
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-
-        .section-title {
-            color: #0077b6;
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #caf0f8;
-            padding-bottom: 8px;
-            margin: 35px 0 20px 0;
-        }
-
-        p {
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-            color: #333;
-        }
-
-        .highlight-box {
-            background: #ffffff;
-            border-left: 4px solid #00b4d8;
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border-radius: 0 8px 8px 0;
-        }
-
-        .list-container {
-            margin: 15px 0 15px 25px;
-        }
-
-        .list-container li {
-            font-size: 1.05rem;
-            color: #333;
-            margin-bottom: 10px;
-            padding-left: 5px;
-        }
-
-        /* 3-Column Layouts */
-        .stats-grid, .grid-3 {
+            padding: 0 20px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 25px 0;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        .stat-item, .grid-col {
-            flex: 1 1 30%;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .stat-item {
-            text-align: center;
-            border: 1px solid #e9ecef;
-        }
-
-        .grid-col {
-            border-top: 4px solid #00b4d8;
-        }
-
-        .stat-number {
-            display: block;
-            color: #0077b6;
-            font-size: 2.2rem;
+        .logo {
+            color: white;
+            font-size: 16pt;
             font-weight: bold;
-            margin-bottom: 5px;
-            line-height: 1.1;
+            padding: 15px 0;
         }
-
-        .stat-text {
-            font-size: 0.95rem;
-            color: #555;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
         }
-
-        .grid-col h3 {
-            color: #0077b6;
-            font-size: 1.15rem;
-            margin-bottom: 12px;
+        .nav-links li {
+            position: relative;
         }
-
-        .grid-col p {
-            font-size: 0.95rem;
-            margin-bottom: 0;
-            color: #444;
-        }
-
-        /* Contact & Crisis Boxes */
-        .contact-box {
-            text-align: center;
-            background: #caf0f8;
-            padding: 30px 20px;
-            border-radius: 8px;
-            margin: 40px 0;
-            font-weight: bold;
-            color: #0077b6;
-            font-size: 1.1rem;
-        }
-
-        .contact-box a {
-            color: #0077b6;
+        .nav-links a {
+            color: white;
             text-decoration: none;
-            background: #ffffff;
+            padding: 20px 15px;
+            display: block;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        .nav-links a:hover {
+            background-color: #3c6382;
+        }
+        /* Dropdown Setup */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 260px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 10;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown-content a {
+            color: #0a3d62;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+            border-bottom: 1px solid #eee;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: #0a3d62;
+        }
+        .nav-links li:hover .dropdown-content {
+            display: block;
+        }
+        /* Foundation Banner */
+        .foundation-banner {
+            background-color: #f39c12;
+            color: white;
+            text-align: center;
             padding: 10px 20px;
-            border-radius: 30px;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #eaf1f8;
+            border-bottom: 2px solid #82ccdd;
+        }
+        .hero h1 {
+            color: #0a3d62;
+            font-size: 28pt;
+            margin-bottom: 15px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero p {
+            font-size: 14pt;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            color: #555;
+        }
+        .clinical-boundary {
+            background-color: #0a3d62;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
             display: inline-block;
+            font-weight: bold;
             margin-top: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: background 0.3s ease;
         }
-        
-        .contact-box a:hover {
-            background: #f0f8ff;
+        /* Main Content Grid */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-
-        .crisis-box {
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
-            border-left: 5px solid #ffc107;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.95rem;
-            color: #856404;
-            border-radius: 0 8px 8px 0;
+        .section-title {
+            color: #3c6382;
+            font-size: 22pt;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
         }
-
-        .crisis-box h4 {
-            margin-bottom: 8px;
-            font-size: 1.05rem;
-            text-transform: uppercase;
+        .grid {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
         }
-
-        footer {
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid #dcdde1;
+            flex: 1;
+        }
+        .card h3 {
+            color: #0a3d62;
+            margin-top: 0;
+            font-size: 16pt;
+        }
+        /* Emergency Footer */
+        .emergency-footer {
+            background-color: #222;
+            color: white;
             text-align: center;
             padding: 30px 20px;
-            font-size: 0.9rem;
-            color: #666;
-            background: #e9ecef;
-            border-top: 1px solid #ddd;
+            margin-top: 50px;
         }
-
-        /* Mobile Responsiveness */
+        .emergency-footer h4 {
+            color: #e74c3c;
+            margin-top: 0;
+        }
         @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            .stat-item, .grid-col { flex: 1 1 100%; }
+            .grid {
+                flex-direction: column;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <span class="dev-badge">Foundational Build Phase (In Development)</span>
-        <h1>The Blue Sky Ecosystem Projects CIC</h1>
-        <h2>"A Shared Movement of Lived Experience and Community Action."</h2>
-    </header>
+    <!-- Foundational Build Banner -->
+    <div class="foundation-banner">
+        We are currently in our foundational build stage—prioritizing robust safeguarding, governance, and AET (Award in Education and Training) frameworks prior to our full community rollout.
+    </div>
 
-    <main>
-        <!-- Link to the dedicated Updates page -->
-        <div class="cta-container">
-            <a href="updates.html" class="update-cta-button">Latest Updates</a>
-        </div>
+    <!-- Navigation -->
+    <div class="navbar">
+        <div class="logo">Blue Sky Ecosystem Projects CIC</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="#">About Us ▾</a>
+                <div class="dropdown-content">
+                    <a href="vision.html">Our Vision & CIC Model</a>
+                    <a href="founders.html">Our Founders & Lived Experience</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">What We Do ▾</a>
+                <div class="dropdown-content">
+                    <a href="corporate.html">Corporate Training & CPD</a>
+                    <a href="workbooks.html">Community Workbooks</a>
+                    <a href="support.html">Emotional & Bereavement Support</a>
+                </div>
+            </li>
+            <li><a href="/update">Progress Updates</a></li>
+            <li><a href="register.html">Register With Us</a></li>
+        </ul>
+    </div>
 
-        <h2 class="section-title">Built by the Community, For the Community</h2>
-        <p>The Blue Sky Ecosystem Projects CIC is built on the belief that real change begins with listening. While core organizational roles are structured, we believe everyone has a vital voice and the opportunity to become actively involved in driving meaningful community change—starting locally in Cumbria, with a long-term vision to reach globally.</p>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Transforming Lived Experience Into Practical Support & Corporate Resilience</h1>
+        <p>A West Cumbria-based Community Interest Company bridging the gap between individuals, employers, and frontline charities through structured educational workbooks and companion guides.</p>
+        <div class="clinical-boundary">Where clinical intervention ends, our lived-experience support begins.</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
         
-        <p><strong>A core part of this journey involves the profound, often difficult step of forgiving ourselves and others, laying the foundation for true healing and progress.</strong> We are intentionally starting small to ensure we maintain integrity and never promise more than we can deliver. We are already exploring many different avenues of support and technology, and we warmly welcome new ideas from individuals, partners, and community members who share our vision.</p>
-
-        <div class="highlight-box">
-            <p><strong>Moving away from textbook theories, our team and supporters bring real-world survival across life's most painful realities, including:</strong></p>
-            <ul class="list-container">
-                <li>Domestic Abuse: Supporting both Victim Recovery and Perpetrator Accountability</li>
-                <li>Grief, Loss, and Deep Trauma Processing</li>
-                <li>Sexual Abuse Survivorship & Healing</li>
-                <li>Severe Mental Health Crises & Institutionalization Navigation</li>
-                <li>Self-Harm and Substance Misuse Recovery</li>
-            </ul>
-            <p style="font-size: 0.9rem; font-style: italic; margin-bottom: 0;">* Please note: This list is not exhaustive as we continuously expand our reach.</p>
-        </div>
-
-        <p><strong>Our Commitment & Journey:</strong> We understand that building a sustainable movement takes time. We aim to cover anyone who suffers; if we cannot immediately provide direct support, individuals will be signposted as we grow. We do not hold external accountability—our mission is to provide true, authentic lived experience from people who have travelled many different paths.</p>
-
-        <h2 class="section-title">Our Reach: Local Roots, Global Connection</h2>
-        <p>While our physical work starts on the ground in Cumbria, technology allows our lived-experience resources to reach individuals wherever they are:</p>
-
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number">8.3B</span>
-                <span class="stat-text">People on Earth</span>
+        <h2 class="section-title">Our Strategic Pillars</h2>
+        
+        <div class="grid">
+            <!-- Corporate Pitch -->
+            <div class="card">
+                <h3>Corporate Training & CPD</h3>
+                <p>We partner with employers to develop tailored mental health workbooks and accredited CPD courses. By fostering open, stigma-free communication in the workplace, our real-world frameworks help reduce absenteeism, alleviate pressure, and ensure employees feel supported rather than discriminated against.</p>
             </div>
-            <div class="stat-item">
-                <span class="stat-number">6.13B</span>
-                <span class="stat-text">Connected Online</span>
+            
+            <!-- Community Support -->
+            <div class="card">
+                <h3>Emotional & Bereavement Guides</h3>
+                <p>Rooted entirely in profound lived experience, we design companion guides addressing impulse regulation, emotional resilience, and bereavement isolation. We provide the actionable, empathetic, non-clinical support necessary to navigate life after crisis.</p>
             </div>
-            <div class="stat-item">
-                <span class="stat-number">5.75B</span>
-                <span class="stat-text">Mobile Devices</span>
+            
+            <!-- Charity Collaboration -->
+            <div class="card">
+                <h3>Adding Capacity to Charities</h3>
+                <p>We are not here to compete. Our goal is to stand alongside local West Cumbrian charities and community hubs, providing the physical equipment, educational frameworks, and shared capability they need to amplify the vital work they already do.</p>
             </div>
         </div>
 
-        <p>By leveraging digital accessibility, we aim to deliver meaningful self-guided support to anyone, anywhere—reaching people both digitally through mobile access and, in time, in person through expanding community networks.</p>
+    </div>
 
-        <h2 class="section-title">Accessible Support for Everyone</h2>
-        <p>We are creating a centralized, accessible hub to ensure no individual is ever locked out of support due to financial barriers or life circumstances:</p>
-
-        <div class="grid-3">
-            <div class="grid-col">
-                <h3>Self-Guided Recovery Tools</h3>
-                <p>Accessible, step-by-step materials for emotional rebuilding. These guided paths embrace forgiveness of self and others to process internal trauma for true, lasting recovery.</p>
-            </div>
-            <div class="grid-col">
-                <h3>New Tech Ecosystem</h3>
-                <p>Navigating our way around all possibilities to bring everything into one unified place by utilizing new technology.</p>
-            </div>
-            <div class="grid-col">
-                <h3>Centralized Signposting</h3>
-                <p>If someone needs support outside our platform, we directly signpost them to trusted external partners and specialist services.</p>
-            </div>
-        </div>
-
-        <h2 class="section-title">Supporting Frontline Services</h2>
-        <p>To keep our resources free and open to all, we operate a flexible, 100% transparent community funding model. Donors have complete choice over where their support goes:</p>
-
-        <div class="grid-3">
-            <div class="grid-col">
-                <h3>1. Support Charities</h3>
-                <p>Direct contributions to chosen frontline partner charities specializing in grief, domestic abuse, mental health, and addiction.</p>
-            </div>
-            <div class="grid-col">
-                <h3>2. Support Us</h3>
-                <p>Funding to support digital infrastructure, resource development, and the ongoing expansion of our lived-experience platform.</p>
-            </div>
-            <div class="grid-col">
-                <h3>3. Split Support</h3>
-                <p>Divide contributions between frontline partner charities and the ongoing operational work of The Blue Sky Ecosystem Projects CIC.</p>
-            </div>
-        </div>
-
-        <div class="highlight-box" style="border-left-color: #0077b6; text-align: center; margin-top: 40px; padding: 25px;">
-            <h3 style="color: #0077b6; font-size: 1.25rem; margin-bottom: 10px;">A Collective Work in Progress</h3>
-            <p style="margin-bottom: 15px;">Small communities making small, honest decisions together create giant leaps. Our goal is starting small yet slowly building up to be there for everyone.</p>
-            <p style="margin-bottom: 15px;">We warmly welcome anyone who has a voice, an idea, or the desire to come on board as we start out. We are actively taking note of new perspectives because <strong>your voice</strong> is incredibly important to us during this initial build phase.</p>
-            <p style="margin-bottom: 0; font-size: 1.1rem; color: #0077b6; font-weight: bold;">Real people changing lives.</p>
-        </div>
-
-        <div class="contact-box">
-            Martin<br>
-            <a href="mailto:contact@blueskyprojects.org.uk">contact@blueskyprojects.org.uk</a><br>
-            <span style="display:inline-block; margin-top:10px; font-weight:normal;">07404 784593</span>
-        </div>
-
-        <div class="crisis-box">
-            <h4>EMERGENCY & IMMEDIATE CRISIS SUPPORT</h4>
-            <p style="margin-bottom: 0;">If you or someone you know is in immediate danger or experiencing a crisis, please seek immediate help. Call emergency services on 999, or contact the Samaritans 24/7 on 116 123. For domestic abuse support, call the National Domestic Abuse Helpline on 0808 2000 247.</p>
-        </div>
-
-    </main>
-
-    <footer>
-        Base: Cumbria, United Kingdom | Legal Structure: Community Interest Company (In Development)<br>
-        <span style="display:inline-block; margin-top:10px;">&copy; 2026 The Blue Sky Ecosystem Projects CIC. All rights reserved.</span>
-    </footer>
+    <!-- Emergency Signposting Footer -->
+    <div class="emergency-footer">
+        <h4>Emergency Support</h4>
+        <p>We are an educational and support organization, not an emergency clinical service.</p>
+        <p>If you or someone you know is in immediate crisis, please call <strong>999</strong> or contact the Samaritans free at <strong>116 123</strong>.</p>
+    </div>
 
 </body>
 </html>
