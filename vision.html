@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Vision & Model | The Blue Sky Ecosystem Projects CIC</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #222;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #fcfdfe;
+        }
+        
+        /* Navigation Bar (matches main site exactly) */
+        .navbar { background-color: #0a3d62; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: relative; }
+        .logo { color: white; font-size: 16pt; font-weight: bold; padding: 15px 20px; }
+        .menu-btn { display: none; }
+        .menu-icon { display: none; cursor: pointer; color: white; font-size: 28px; padding: 10px 20px; user-select: none; }
+        .nav-links { list-style: none; margin: 0; padding: 0; display: flex; }
+        .nav-links li { position: relative; }
+        .nav-links a { color: white; text-decoration: none; padding: 20px 12px; display: block; font-weight: bold; font-size: 11pt; }
+        .nav-links a:hover { background-color: #3c6382; }
+        .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 260px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 10; top: 100%; left: 0; }
+        .dropdown-content a { color: #0a3d62; padding: 12px 16px; text-decoration: none; display: block; font-weight: normal; border-bottom: 1px solid #eee; }
+        .dropdown-content a:hover { background-color: #ddd; color: #0a3d62; }
+        .nav-links li:hover .dropdown-content { display: block; }
+        
+        /* Foundation Banner */
+        .foundation-banner { background-color: #f39c12; color: white; text-align: center; padding: 10px 20px; font-weight: bold; font-size: 11pt; }
+        
+        /* Hero Section */
+        .hero { text-align: center; padding: 60px 20px; background-color: #eaf1f8; border-bottom: 2px solid #82ccdd; }
+        .hero h1 { color: #0a3d62; font-size: 28pt; margin-bottom: 15px; }
+        .hero p { font-size: 14pt; max-width: 800px; margin: 0 auto; color: #555; }
+        
+        /* Content Area */
+        .container { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+        
+        .intro-block {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .intro-block h2 { color: #3c6382; font-size: 22pt; margin-bottom: 20px; }
+        .intro-block p { font-size: 13pt; color: #444; max-width: 850px; margin: 0 auto 20px auto; }
+        
+        /* Grid Ecosystem */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 50px; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #dcdde1; }
+        .card h3 { color: #0a3d62; margin-top: 0; font-size: 16pt; border-bottom: 2px solid #eaf1f8; padding-bottom: 10px; }
+        
+        /* Roadmap Section */
+        .roadmap { background-color: #0a3d62; color: white; padding: 40px; border-radius: 8px; margin-bottom: 40px; }
+        .roadmap h2 { margin-top: 0; font-size: 22pt; color: #82ccdd; text-align: center; margin-bottom: 30px; }
+        .step { margin-bottom: 20px; }
+        .step h4 { margin: 0 0 5px 0; font-size: 15pt; color: #f39c12; }
+        .step p { margin: 0; font-size: 12pt; }
+        
+        /* Footer */
+        .footer-wrapper { background-color: #222; color: white; margin-top: 50px; }
+        .legal-footer { text-align: center; padding: 20px; font-size: 10pt; color: #aaa; }
+        
+        /* Mobile Nav */
+        @media (max-width: 1000px) {
+            .menu-icon { display: block; }
+            .nav-links { display: none; flex-direction: column; width: 100%; background-color: #0a3d62; }
+            .menu-btn:checked ~ .nav-links { display: flex; }
+            .nav-links a { padding: 15px 20px; border-top: 1px solid #08304f; }
+            .grid { grid-template-columns: 1fr; }
+            .dropdown-content { position: relative; min-width: 100%; box-shadow: none; background-color: #08304f; }
+            .dropdown-content a { color: white; padding-left: 35px; border-bottom: 1px solid #0a3d62; border-top: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="foundation-banner">
+        We are currently in our foundational build stage—prioritizing robust safeguarding, governance, and AET (Award in Education and Training) frameworks prior to our full community rollout.
+    </div>
+
+    <!-- Mobile-Friendly Navigation -->
+    <div class="navbar">
+        <div class="logo">The Blue Sky Ecosystem Projects CIC</div>
+        <input type="checkbox" id="menu-btn" class="menu-btn">
+        <label for="menu-btn" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="#">About Us ▾</a>
+                <div class="dropdown-content">
+                    <a href="vision.html">Our Vision & CIC Model</a>
+                    <a href="founders.html">Our Founders & Lived Experience</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">What We Do ▾</a>
+                <div class="dropdown-content">
+                    <a href="corporate.html">Corporate Training & CPD</a>
+                    <a href="workbooks.html">Community Workbooks</a>
+                    <a href="support.html">Emotional & Bereavement Support</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Progress Updates ▾</a>
+                <div class="dropdown-content">
+                    <a href="/update">August 2026 Update</a>
+                    <a href="/update-september">September 2026 Update</a>
+                    <a href="/update-october">October 2026 Update</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Contact Us ▾</a>
+                <div class="dropdown-content">
+                    <a href="mailto:contact@blueskyprojects.org.uk">Email: contact@blueskyprojects.org.uk</a>
+                    <a href="tel:07404784593">Phone: 07404784593</a>
+                </div>
+            </li>
+            <li><a href="voice.html">Your Voice Matters</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <h1>A Global Ecosystem of Even, Loving Care</h1>
+        <p>Our vision is simple but profound: to create a sustainable network that provides help everywhere in one place. But true resilience is not built overnight.</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="intro-block">
+            <h2>Building Slowly, Getting It Right</h2>
+            <p>Everything takes time to build. We are fiercely committed to laying a flawless foundation before we expand. Currently in our active build stage, our absolute priority is establishing rigorous governance, securing AET qualifications, and having every workbook professionally reviewed. We refuse to rush the process of saving lives.</p>
+            <p>We are piloting our model in West Cumbria first. Only when our frameworks are proven, safe, and effective locally will we network our support ecosystems into neighboring counties, and eventually, the wider UK.</p>
+        </div>
+
+        <div class="grid">
+            <!-- The Corporate Engine -->
+            <div class="card">
+                <h3>The Corporate Engine</h3>
+                <p>We design mental health workbooks and structured CPD (Continuing Professional Development) courses for employers. This helps companies reduce absenteeism, create stigma-free communication, and support their teams. This B2B operation serves as the financial engine that funds our community mission under our strict 'split support' model.</p>
+            </div>
+            
+            <!-- The Community Framework -->
+            <div class="card">
+                <h3>The Community Framework</h3>
+                <p>Rooted in real lived experience, we create companion guides focused on emotional regulation, bereavement, and impulse control. Once professionally reviewed and shaped by community feedback, these workbooks will serve as the core curriculum for our future facilitated group sessions.</p>
+            </div>
+            
+            <!-- The Havens -->
+            <div class="card">
+                <h3>Future Havens</h3>
+                <p>As we scale our operations, we will be launching dedicated digital and physical spaces—a <strong>Men's Haven</strong> and a <strong>Women's Haven</strong>. These will act as centralized hubs for safety, peer support, and educational facilitation, perfectly organizing our goal of providing comprehensive help in one place.</p>
+            </div>
+
+            <!-- The Umbrella & Micro-Fund -->
+            <div class="card">
+                <h3>The Blue Sky Umbrella & Micro-Fund</h3>
+                <p>We are building an ecosystem to uplift others, not compete with them. As surplus funds are generated, we will establish a structured micro-fund. Individuals meeting specific criteria, as well as vital grassroots charities (such as those tackling domestic violence), will be able to apply for funding or even run their own localized projects securely under The Blue Sky Umbrella.</p>
+            </div>
+        </div>
+
+        <div class="roadmap">
+            <h2>Our Stepped Roadmap</h2>
+            
+            <div class="step">
+                <h4>Phase 1: The Foundational Build (Current)</h4>
+                <p>Developing core workbooks, securing AET accreditations, establishing legal governance, and ensuring all companion guides undergo rigorous professional review.</p>
+            </div>
+            
+            <div class="step">
+                <h4>Phase 2: The Cumbria Pilot</h4>
+                <p>Launching our finalized workbooks and initial facilitated group sessions locally in West Cumbria, embedding ourselves alongside existing frontline charities.</p>
+            </div>
+            
+            <div class="step">
+                <h4>Phase 3: The Umbrella Expansion</h4>
+                <p>Activating the 'split support' micro-fund to empower community projects, launching the Men's and Women's Havens, and scaling our ecosystem to neighboring UK counties.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Area -->
+    <div class="footer-wrapper">
+        <div class="legal-footer">
+            &copy; 2026 The Blue Sky Ecosystem Projects CIC.<br>
+            A registered Community Interest Company in England and Wales. Company Registration Number: 17386408.
+        </div>
+    </div>
+
+</body>
+</html>
