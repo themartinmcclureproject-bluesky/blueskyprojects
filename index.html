@@ -111,6 +111,20 @@
             display: inline-block;
             font-weight: bold;
             margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        .btn-primary {
+            display: inline-block;
+            background-color: #0a3d62;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #3c6382;
         }
         /* Main Content Grid */
         .container {
@@ -127,7 +141,8 @@
             text-align: center;
         }
         .grid {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
             margin-bottom: 40px;
         }
@@ -137,28 +152,36 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             border: 1px solid #dcdde1;
-            flex: 1;
         }
         .card h3 {
             color: #0a3d62;
             margin-top: 0;
             font-size: 16pt;
         }
-        /* Emergency Footer */
-        .emergency-footer {
+        /* Emergency & Legal Footer */
+        .footer-wrapper {
             background-color: #222;
             color: white;
+            margin-top: 50px;
+        }
+        .emergency-footer {
             text-align: center;
             padding: 30px 20px;
-            margin-top: 50px;
+            border-bottom: 1px solid #444;
         }
         .emergency-footer h4 {
             color: #e74c3c;
             margin-top: 0;
         }
+        .legal-footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 10pt;
+            color: #aaa;
+        }
         @media (max-width: 768px) {
             .grid {
-                flex-direction: column;
+                grid-template-columns: 1fr;
             }
             .nav-links {
                 flex-wrap: wrap;
@@ -176,7 +199,7 @@
 
     <!-- Navigation -->
     <div class="navbar">
-        <div class="logo">Blue Sky Ecosystem Projects CIC</div>
+        <div class="logo">The Blue Sky Ecosystem Projects CIC</div>
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
             <li class="dropdown">
@@ -204,6 +227,8 @@
         <h1>Transforming Lived Experience Into Practical Support & Corporate Resilience</h1>
         <p>A West Cumbria-based Community Interest Company bridging the gap between individuals, employers, and frontline charities through structured educational workbooks and companion guides.</p>
         <div class="clinical-boundary">Where clinical intervention ends, our lived-experience support begins.</div>
+        <br>
+        <a href="/update" class="btn-primary">View Our October 2026 Progress Report</a>
     </div>
 
     <!-- Main Content -->
@@ -224,6 +249,12 @@
                 <p>Rooted entirely in profound lived experience, we design companion guides addressing impulse regulation, emotional resilience, and bereavement isolation. We provide the actionable, empathetic, non-clinical support necessary to navigate life after crisis.</p>
             </div>
             
+            <!-- Community Reinvestment -->
+            <div class="card">
+                <h3>Community Reinvestment & Connection</h3>
+                <p>We exist for the people. As a registered CIC, our generated income is reinvested directly into the community. We actively raise awareness and foster human connection through facilitated online meetings, in-person group support sessions, and collaborative events.</p>
+            </div>
+
             <!-- Charity Collaboration -->
             <div class="card">
                 <h3>Adding Capacity to Charities</h3>
@@ -233,11 +264,20 @@
 
     </div>
 
-    <!-- Emergency Signposting Footer -->
-    <div class="emergency-footer">
-        <h4>Emergency Support</h4>
-        <p>We are an educational and support organization, not an emergency clinical service.</p>
-        <p>If you or someone you know is in immediate crisis, please call <strong>999</strong> or contact the Samaritans free at <strong>116 123</strong>.</p>
+    <!-- Footer Area -->
+    <div class="footer-wrapper">
+        <!-- Emergency Signposting -->
+        <div class="emergency-footer">
+            <h4>Emergency Support</h4>
+            <p>We are an educational and support organization, not an emergency clinical service.</p>
+            <p>If you or someone you know is in immediate crisis, please call <strong>999</strong> or contact the Samaritans free at <strong>116 123</strong>.</p>
+        </div>
+        
+        <!-- Legal Registration Details -->
+        <div class="legal-footer">
+            &copy; 2026 The Blue Sky Ecosystem Projects CIC.<br>
+            A registered Community Interest Company in England and Wales. Company Registration Number: 17386408.
+        </div>
     </div>
 
 </body>
