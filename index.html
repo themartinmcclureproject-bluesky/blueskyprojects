@@ -87,7 +87,6 @@
             text-align: center;
             padding: 60px 20px;
             background-color: #eaf1f8;
-            border-bottom: 2px solid #82ccdd;
         }
         .hero h1 {
             color: #0a3d62;
@@ -112,37 +111,15 @@
             font-weight: bold;
             margin-top: 15px;
         }
-        /* Progress Updates Timeline Strip */
-        .progress-strip {
-            background-color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid #dcdde1;
-        }
-        .progress-strip h2 {
-            color: #0a3d62;
-            margin-top: 0;
-            font-size: 20pt;
-            margin-bottom: 10px;
-        }
-        .progress-strip p {
-            color: #555;
-            font-size: 12pt;
-            margin-bottom: 25px;
-        }
-        .btn-update {
-            display: inline-block;
+        /* Updates Notice Banner */
+        .updates-banner {
             background-color: #3c6382;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+            text-align: center;
+            padding: 15px 20px;
             font-weight: bold;
-            border-radius: 5px;
-            margin: 5px;
-            transition: background-color 0.3s;
-        }
-        .btn-update:hover {
-            background-color: #0a3d62;
+            font-size: 12pt;
+            border-bottom: 2px solid #82ccdd;
         }
         /* Main Content Grid */
         .container {
@@ -235,7 +212,15 @@
                     <a href="support.html">Emotional & Bereavement Support</a>
                 </div>
             </li>
-            <li><a href="#updates">Progress Updates</a></li>
+            <li class="dropdown">
+                <a href="#">Progress Updates ▾</a>
+                <div class="dropdown-content">
+                    <!-- Dropdown links for each month -->
+                    <a href="/update">August 2026 Update</a>
+                    <a href="/update-september">September 2026 Update</a>
+                    <a href="/update-october">October 2026 Update</a>
+                </div>
+            </li>
             <li><a href="register.html">Register With Us</a></li>
         </ul>
     </div>
@@ -245,24 +230,15 @@
         <h1>Transforming Lived Experience Into Practical Support & Corporate Resilience</h1>
         <p>A West Cumbria-based Community Interest Company bridging the gap between individuals, employers, and frontline charities through structured educational workbooks and companion guides.</p>
         <div class="clinical-boundary">Where clinical intervention ends, our lived-experience support begins.</div>
-        <br><br>
-        <a href="/update-october" class="btn-update" style="font-size: 14pt; padding: 15px 30px;">View Our October 2026 Progress Report</a>
     </div>
 
-    <!-- Transparent Progress Timeline -->
-    <div id="updates" class="progress-strip">
-        <h2>Track Our Journey</h2>
-        <p>Transparency is at our core. Read our monthly reports to see how our digital and physical ecosystems are being built.</p>
-        
-        <!-- The buttons for your updates -->
-        <a href="/update" class="btn-update">August 2026 Update</a>
-        <a href="/update-september" class="btn-update">September 2026 Update</a>
-        <a href="/update-october" class="btn-update">October 2026 Update</a>
+    <!-- Updates Notice Banner (Keeps the page clean while directing attention) -->
+    <div class="updates-banner">
+        Please see the Progress Updates menu above to review our monthly milestone reports and track our ongoing journey.
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content Grid -->
     <div class="container">
-        
         <h2 class="section-title">Our Strategic Pillars</h2>
         
         <div class="grid">
@@ -286,7 +262,6 @@
                 <p>We are not here to compete. Our goal is to stand alongside local West Cumbrian charities and community hubs, providing the physical equipment, educational frameworks, and shared capability they need to amplify the vital work they already do.</p>
             </div>
         </div>
-
     </div>
 
     <!-- Footer Area -->
