@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Workbooks & Guides | The Blue Sky Ecosystem Projects CIC</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #222;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #fcfdfe;
+        }
+        
+        /* Navigation Bar */
+        .navbar { background-color: #0a3d62; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: relative; }
+        .logo { color: white; font-size: 16pt; font-weight: bold; padding: 15px 20px; }
+        .menu-btn { display: none; }
+        .menu-icon { display: none; cursor: pointer; color: white; font-size: 28px; padding: 10px 20px; user-select: none; }
+        .nav-links { list-style: none; margin: 0; padding: 0; display: flex; }
+        .nav-links li { position: relative; }
+        .nav-links a { color: white; text-decoration: none; padding: 20px 12px; display: block; font-weight: bold; font-size: 11pt; }
+        .nav-links a:hover { background-color: #3c6382; }
+        .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 260px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 10; top: 100%; left: 0; }
+        .dropdown-content a { color: #0a3d62; padding: 12px 16px; text-decoration: none; display: block; font-weight: normal; border-bottom: 1px solid #eee; }
+        .dropdown-content a:hover { background-color: #ddd; color: #0a3d62; }
+        .nav-links li:hover .dropdown-content { display: block; }
+        
+        /* Foundation Banner */
+        .foundation-banner { background-color: #f39c12; color: white; text-align: center; padding: 10px 20px; font-weight: bold; font-size: 11pt; }
+        
+        /* Hero Section */
+        .hero { text-align: center; padding: 60px 20px; background-color: #eaf1f8; border-bottom: 2px solid #82ccdd; }
+        .hero h1 { color: #0a3d62; font-size: 28pt; margin-bottom: 15px; }
+        .hero p { font-size: 14pt; max-width: 900px; margin: 0 auto; color: #555; }
+        
+        /* Content Area */
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+        
+        .status-box {
+            background-color: #0a3d62;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .status-box h3 { margin-top: 0; color: #82ccdd; font-size: 16pt; }
+        .status-box p { font-size: 12pt; margin: 0; }
+
+        .service-list { margin-bottom: 40px; }
+        .service-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #3c6382;
+            margin-bottom: 20px;
+        }
+        .service-item h3 { color: #0a3d62; margin-top: 0; font-size: 16pt; }
+        .service-item p { margin: 0; color: #444; }
+
+        /* Paramount Safeguarding Box */
+        .safeguarding-box {
+            background-color: #fef0f0;
+            border: 2px solid #e74c3c;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .safeguarding-box h3 { color: #c0392b; margin-top: 0; font-size: 18pt; text-align: center; }
+        .safeguarding-box p { font-size: 12pt; color: #333; margin-bottom: 15px; }
+        .safeguarding-box ul { font-size: 12pt; color: #333; font-weight: bold; }
+        
+        /* Action Banner */
+        .action-banner { background-color: #f4f6f8; text-align: center; padding: 40px 20px; border: 1px solid #dcdde1; border-radius: 8px; }
+        .action-banner h3 { color: #0a3d62; margin-top: 0; font-size: 18pt; }
+        .btn-primary { display: inline-block; background-color: #0a3d62; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; margin: 10px; transition: background-color 0.3s; }
+        .btn-primary:hover { background-color: #3c6382; }
+        .btn-secondary { display: inline-block; background-color: #ffffff; color: #0a3d62; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; border: 2px solid #0a3d62; margin: 10px; transition: background-color 0.3s; }
+        .btn-secondary:hover { background-color: #eaf1f8; }
+        
+        /* Footer */
+        .footer-wrapper { background-color: #222; color: white; margin-top: 50px; }
+        .legal-footer { text-align: center; padding: 20px; font-size: 10pt; color: #aaa; }
+        
+        /* Mobile Nav */
+        @media (max-width: 1000px) {
+            .menu-icon { display: block; }
+            .nav-links { display: none; flex-direction: column; width: 100%; background-color: #0a3d62; }
+            .menu-btn:checked ~ .nav-links { display: flex; }
+            .nav-links a { padding: 15px 20px; border-top: 1px solid #08304f; }
+            .dropdown-content { position: relative; min-width: 100%; box-shadow: none; background-color: #08304f; }
+            .dropdown-content a { color: white; padding-left: 35px; border-bottom: 1px solid #0a3d62; border-top: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="foundation-banner">
+        We are currently in our foundational build stage—prioritizing robust safeguarding, governance, and AET (Award in Education and Training) frameworks prior to our full community rollout.
+    </div>
+
+    <!-- Mobile-Friendly Navigation -->
+    <div class="navbar">
+        <div class="logo">The Blue Sky Ecosystem Projects CIC</div>
+        <input type="checkbox" id="menu-btn" class="menu-btn">
+        <label for="menu-btn" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="#">About Us ▾</a>
+                <div class="dropdown-content">
+                    <a href="vision.html">Our Vision & CIC Model</a>
+                    <a href="founders.html">Our Founders & Lived Experience</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">What We Do ▾</a>
+                <div class="dropdown-content">
+                    <a href="corporate.html">Corporate Training & CPD</a>
+                    <a href="workbooks.html">Community Workbooks</a>
+                    <a href="support.html">Emotional & Bereavement Support</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Progress Updates ▾</a>
+                <div class="dropdown-content">
+                    <a href="/update">August 2026 Update</a>
+                    <a href="/update-september">September 2026 Update</a>
+                    <a href="/update-october">October 2026 Update</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Contact Us ▾</a>
+                <div class="dropdown-content">
+                    <a href="mailto:contact@blueskyprojects.org.uk">Email: contact@blueskyprojects.org.uk</a>
+                    <a href="tel:07404784593">Phone: 07404784593</a>
+                </div>
+            </li>
+            <li><a href="voice.html">Your Voice Matters</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <h1>Community Workbooks & Awareness Guides</h1>
+        <p>Transforming every facet of our lived experience into actionable, structured support for those navigating their darkest chapters.</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="status-box">
+            <h3>Currently in the Active Build Stage</h3>
+            <p>Our educational ecosystem is vast. We are actively designing frameworks that cover the full spectrum of our survival—from navigating the justice system and institutionalization, to surviving domestic and sexual abuse, battling addiction, regulating impulses, and managing severe bereavement. These materials will not be released until they meet our rigorous standards for safety and professional review.</p>
+        </div>
+
+        <div class="service-list">
+            <h2>Our Future Resources</h2>
+            
+            <div class="service-item">
+                <h3>Free Awareness Guides</h3>
+                <p>Knowledge is the first step toward resilience. We are developing a series of completely free, easily accessible awareness guides to provide immediate baseline support, crucial signposting, and clarity for individuals in distress and their families.</p>
+            </div>
+            
+            <div class="service-item">
+                <h3>Structured Workbooks & Companion Guides</h3>
+                <p>Drawing on decades of survival, we are writing deep-dive workbooks tailored to specific traumas and challenges. These companion guides offer non-clinical, empathetic, and actionable frameworks to help individuals rebuild their lives step by step.</p>
+            </div>
+            
+            <div class="service-item">
+                <h3>Future Facilitated Courses</h3>
+                <p>Our workbooks will eventually form the curriculum for our facilitated group sessions. These safe, structured environments will allow individuals to work through our materials collectively, fostering peer support and breaking the cycle of isolation.</p>
+            </div>
+        </div>
+
+        <!-- Strict Safeguarding & Volunteer Call -->
+        <div class="safeguarding-box">
+            <h3>Call for Volunteers: Safeguarding is Paramount</h3>
+            <p>We are looking for passionate individuals with lived experience to help us complete our workbooks and prepare for our full launch. As we look toward the future of running our facilitated courses, our commitment to safety is absolute and non-negotiable.</p>
+            <p>To protect the vulnerable communities we serve, anyone seeking to become a volunteer facilitator must strictly complete:</p>
+            <ul>
+                <li>Comprehensive Safeguarding Training</li>
+                <li>The appropriate AET (Award in Education and Training) Qualifications</li>
+                <li>A mandatory Enhanced DBS Check</li>
+            </ul>
+            <p>These protocols are paramount to everything we create at The Blue Sky Ecosystem Projects.</p>
+        </div>
+
+        <div class="action-banner">
+            <h3>Help Us Build the Foundation</h3>
+            <p>If you have lived experience or professional expertise and want to volunteer your time to help us complete these workbooks, or if you wish to register your interest for future courses, we want to hear from you.</p>
+            <a href="register.html" class="btn-primary">Register Your Interest</a>
+            <a href="voice.html" class="btn-secondary">Share Your Perspective</a>
+        </div>
+
+    </div>
+
+    <div class="footer-wrapper">
+        <div class="legal-footer">
+            &copy; 2026 The Blue Sky Ecosystem Projects CIC.<br>
+            A registered Community Interest Company in England and Wales. Company Registration Number: 17386408.
+        </div>
+    </div>
+
+</body>
+</html>
