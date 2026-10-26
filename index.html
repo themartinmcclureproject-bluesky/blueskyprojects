@@ -111,25 +111,43 @@
             display: inline-block;
             font-weight: bold;
             margin-top: 15px;
+        }
+        /* Progress Updates Timeline Strip */
+        .progress-strip {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #dcdde1;
+        }
+        .progress-strip h2 {
+            color: #0a3d62;
+            margin-top: 0;
+            font-size: 20pt;
+            margin-bottom: 10px;
+        }
+        .progress-strip p {
+            color: #555;
+            font-size: 12pt;
             margin-bottom: 25px;
         }
-        .btn-primary {
+        .btn-update {
             display: inline-block;
-            background-color: #0a3d62;
+            background-color: #3c6382;
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
+            margin: 5px;
             transition: background-color 0.3s;
         }
-        .btn-primary:hover {
-            background-color: #3c6382;
+        .btn-update:hover {
+            background-color: #0a3d62;
         }
         /* Main Content Grid */
         .container {
             max-width: 1100px;
-            margin: 40px auto;
+            margin: 50px auto;
             padding: 0 20px;
         }
         .section-title {
@@ -217,7 +235,7 @@
                     <a href="support.html">Emotional & Bereavement Support</a>
                 </div>
             </li>
-            <li><a href="/update">Progress Updates</a></li>
+            <li><a href="#updates">Progress Updates</a></li>
             <li><a href="register.html">Register With Us</a></li>
         </ul>
     </div>
@@ -227,8 +245,17 @@
         <h1>Transforming Lived Experience Into Practical Support & Corporate Resilience</h1>
         <p>A West Cumbria-based Community Interest Company bridging the gap between individuals, employers, and frontline charities through structured educational workbooks and companion guides.</p>
         <div class="clinical-boundary">Where clinical intervention ends, our lived-experience support begins.</div>
-        <br>
-        <a href="/update" class="btn-primary">View Our October 2026 Progress Report</a>
+    </div>
+
+    <!-- Transparent Progress Timeline -->
+    <div id="updates" class="progress-strip">
+        <h2>Track Our Journey</h2>
+        <p>Transparency is at our core. Read our monthly reports to see how our digital and physical ecosystems are being built.</p>
+        
+        <!-- The buttons for your updates -->
+        <a href="/update" class="btn-update">August 2026 Update</a>
+        <a href="/update-september" class="btn-update">September 2026 Update</a>
+        <!-- You can easily add <a href="/update-october" class="btn-update">October 2026 Update</a> here later! -->
     </div>
 
     <!-- Main Content -->
