@@ -37,26 +37,35 @@
         .hero p { font-size: 14pt; max-width: 800px; margin: 0 auto; color: #555; }
         
         /* Content Area */
-        .container { max-width: 850px; margin: 50px auto; padding: 0 20px; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         
         .update-box {
             background: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid #dcdde1;
             text-align: center;
         }
-        .update-box h2 { color: #0a3d62; margin-top: 0; font-size: 22pt; margin-bottom: 20px; }
-        .update-box p { font-size: 12pt; color: #444; margin-bottom: 30px; }
+        .update-box h2 { color: #0a3d62; margin-top: 0; font-size: 20pt; margin-bottom: 15px; }
+        .update-box p { font-size: 12pt; color: #444; margin-bottom: 25px; }
         
-        /* Download Button */
+        /* PDF Embed Viewer */
+        .pdf-viewer {
+            width: 100%;
+            height: 750px;
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        /* Fallback / Direct Download Button */
         .btn-download {
             display: inline-block;
             background-color: #0a3d62;
             color: white;
-            padding: 15px 30px;
-            font-size: 13pt;
+            padding: 12px 25px;
+            font-size: 11pt;
             font-weight: bold;
             text-decoration: none;
             border-radius: 6px;
@@ -115,7 +124,7 @@
             </li>
             
             <li class="dropdown">
-                <a href="#">Progress Updates ▾</a>
+                <a href="update-october.html">Progress Updates ▾</a>
                 <div class="dropdown-content">
                     <a href="/update">August 2026 Update</a>
                     <a href="/update-september">September 2026 Update</a>
@@ -124,7 +133,7 @@
             </li>
 
             <li class="dropdown">
-                <a href="#">Contact Us ▾</a>
+                <a href="mailto:contact@blueskyprojects.org.uk">Contact Us ▾</a>
                 <div class="dropdown-content">
                     <a href="mailto:contact@blueskyprojects.org.uk">Email: contact@blueskyprojects.org.uk</a>
                     <a href="tel:07404784593">Phone: 07404784593</a>
@@ -138,17 +147,21 @@
 
     <div class="hero">
         <h1>October 2026 Progress Update</h1>
-        <p>Review our latest organizational milestones, governance developments, and community rollout steps across West Cumbria.</p>
+        <p>View our official monthly report directly below or download a copy for your records.</p>
     </div>
 
     <div class="container">
         
         <div class="update-box">
-            <h2>Download Official Report</h2>
-            <p>Our October 2026 monthly progress report is available below for download. This document details our ongoing foundational build, partner collaborations, and upcoming initiatives.</p>
+            <h2>October 2026 Report</h2>
+            <p>You can read the document right here in your browser window using the viewer below, or click the button to open/download the PDF file directly.</p>
             
-            <!-- Linked directly to your uploaded PDF filename -->
-            <a href="Blue_Sky_October_2026_Update.pdf" class="btn-download" target="_blank">Download October 2026 PDF Report</a>
+            <!-- Embedded PDF Viewer -->
+            <embed src="Blue_Sky_October_2026_Update.pdf" type="application/pdf" class="pdf-viewer">
+
+            <br><br>
+            <!-- Direct Download Link Button -->
+            <a href="Blue_Sky_October_2026_Update.pdf" class="btn-download" target="_blank">Download PDF Report</a>
         </div>
 
     </div>
