@@ -37,42 +37,46 @@
         .hero p { font-size: 14pt; max-width: 800px; margin: 0 auto; color: #555; }
         
         /* Content Area */
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .container { max-width: 850px; margin: 50px auto; padding: 0 20px; }
         
         .update-box {
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid #dcdde1;
             text-align: center;
         }
-        .update-box h2 { color: #0a3d62; margin-top: 0; font-size: 20pt; margin-bottom: 15px; }
-        .update-box p { font-size: 12pt; color: #444; margin-bottom: 25px; }
+        .update-box h2 { color: #0a3d62; margin-top: 0; font-size: 22pt; margin-bottom: 20px; }
+        .update-box p { font-size: 12pt; color: #444; margin-bottom: 30px; }
         
-        /* PDF Embed Viewer */
-        .pdf-viewer {
-            width: 100%;
-            height: 750px;
-            border: 1px solid #dcdde1;
-            border-radius: 6px;
-            margin-bottom: 20px;
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
         }
-
-        /* Fallback / Direct Download Button */
-        .btn-download {
+        .btn-action {
             display: inline-block;
             background-color: #0a3d62;
             color: white;
-            padding: 12px 25px;
-            font-size: 11pt;
+            padding: 15px 35px;
+            font-size: 12pt;
             font-weight: bold;
             text-decoration: none;
             border-radius: 6px;
             transition: background-color 0.2s;
+            width: 280px;
+        }
+        .btn-action:hover {
+            background-color: #3c6382;
+        }
+        .btn-download {
+            background-color: #f39c12;
         }
         .btn-download:hover {
-            background-color: #3c6382;
+            background-color: #d35400;
         }
 
         /* Footer */
@@ -124,7 +128,7 @@
             </li>
             
             <li class="dropdown">
-                <a href="update-october.html">Progress Updates ▾</a>
+                <a href="#">Progress Updates ▾</a>
                 <div class="dropdown-content">
                     <a href="/update">August 2026 Update</a>
                     <a href="/update-september">September 2026 Update</a>
@@ -147,21 +151,22 @@
 
     <div class="hero">
         <h1>October 2026 Progress Update</h1>
-        <p>View our official monthly report directly below or download a copy for your records.</p>
+        <p>Access our official monthly progress report and governance documentation.</p>
     </div>
 
     <div class="container">
         
         <div class="update-box">
             <h2>October 2026 Report</h2>
-            <p>You can read the document right here in your browser window using the viewer below, or click the button to open/download the PDF file directly.</p>
+            <p>Click below to open the PDF report in a new browser tab, or use the download option to save a copy directly to your device.</p>
             
-            <!-- Embedded PDF Viewer -->
-            <embed src="Blue_Sky_October_2026_Update.pdf" type="application/pdf" class="pdf-viewer">
-
-            <br><br>
-            <!-- Direct Download Link Button -->
-            <a href="Blue_Sky_October_2026_Update.pdf" class="btn-download" target="_blank">Download PDF Report</a>
+            <div class="btn-group">
+                <!-- Open Button -->
+                <a href="Blue_Sky_October_2026_Update.pdf" class="btn-action" target="_blank">Open PDF</a>
+                
+                <!-- Download Button with attribute to trigger download -->
+                <a href="Blue_Sky_October_2026_Update.pdf" class="btn-action btn-download" download>Download PDF</a>
+            </div>
         </div>
 
     </div>
